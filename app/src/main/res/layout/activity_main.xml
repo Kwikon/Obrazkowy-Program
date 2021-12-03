@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CheckBox"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/Zdjecie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="328dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img1" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="354dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="266dp"
+        android:checked="true"
+        android:text="Pokazać obrazek?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Zdjecie" />
+
+    <ImageButton
+        android:id="@+id/nastepne"
+        android:layout_width="124dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1"
+        app:srcCompat="@drawable/nastepne" />
+
+    <ImageButton
+        android:id="@+id/poprzednie"
+        android:layout_width="110dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1"
+        app:srcCompat="@drawable/poprzednie" />
+
+    <EditText
+        android:id="@+id/RotateText"
+        android:layout_width="149dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poprzednie" />
+
+    <Button
+        android:id="@+id/Rotate"
+        android:layout_width="88dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="24dp"
+        android:text="obróć"
+        app:layout_constraintStart_toEndOf="@+id/RotateText"
+        app:layout_constraintTop_toBottomOf="@+id/nastepne" />
+
+    <EditText
+        android:id="@+id/ResizeText"
+        android:layout_width="148dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RotateText" />
+
+    <Button
+        android:id="@+id/Resize"
+        android:layout_width="87dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="16dp"
+        android:text="Resize"
+        app:layout_constraintStart_toEndOf="@+id/ResizeText"
+        app:layout_constraintTop_toBottomOf="@+id/Rotate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
